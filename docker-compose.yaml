@@ -11,13 +11,10 @@ services:
     volumes:
       - issuer_data:/data
     environment:
+      - ADMIN_API_KEY=secure-key
       - JWT_SECRET=secure-jwt
       - WALLET_KEY=secure-wallet-key
       - WEBHOOK_URL=http://localhost:8084/webhooks
-    command: >
-      start
-      --arg-file /configs/config.yml
-      --mediator-invitation http://host.docker.internal:8010?oob=eyJAdHlwZSI6ICJodHRwczovL2RpZGNvbW0ub3JnL291dC1vZi1iYW5kLzEuMS9pbnZpdGF0aW9uIiwgIkBpZCI6ICI3YjQyMDc1YS02NWI2LTQzZjMtYTAwMS05OGQwMjUzOWY5NDAiLCAibGFiZWwiOiAibWVkaWF0b3ItYWNhcHkiLCAiaGFuZHNoYWtlX3Byb3RvY29scyI6IFsiaHR0cHM6Ly9kaWRjb21tLm9yZy9kaWRleGNoYW5nZS8xLjAiXSwgInNlcnZpY2VzIjogW3siaWQiOiAiI2lubGluZSIsICJ0eXBlIjogImRpZC1jb21tdW5pY2F0aW9uIiwgInJlY2lwaWVudEtleXMiOiBbImRpZDprZXk6ejZNa2ptNG5hVzE1TlhrTkFHYjRZUDZyUXN6SjQ4VTJiN1RYUmZjZDYxV1pHcDg1I3o2TWtqbTRuYVcxNU5Ya05BR2I0WVA2clFzeko0OFUyYjdUWFJmY2Q2MVdaR3A4NSJdLCAic2VydmljZUVuZHBvaW50IjogImh0dHA6Ly9ob3N0LmRvY2tlci5pbnRlcm5hbDo4MDEwIn1dfQ
 networks:
   default:
     name: ticket-network
