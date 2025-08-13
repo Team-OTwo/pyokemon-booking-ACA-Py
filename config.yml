@@ -12,6 +12,8 @@ admin: [0.0.0.0, 8002]
 # TODO: ADMIN_API_KEY
 admin-insecure-mode: true
 webhook-url: ${WEBHOOK_URL}
+auto-provision: true
+public-invites: true
 wallet-type: askar
 wallet-name: issuer_wallet
 wallet-key: ${WALLET_KEY}
