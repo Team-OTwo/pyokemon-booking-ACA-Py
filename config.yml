@@ -1,4 +1,4 @@
-label: 'booking-acapy'
+label: 'tenant-acapy'
 endpoint:
   - 'http://localhost:8020'
   - 'ws://localhost:8005'
